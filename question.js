@@ -1,11 +1,13 @@
 var RF, SL, BH, NE; // User's scores
 RF = SL = BH = NE = 0;
-var qn = 0; // Question numberß
+var qn = 0; // Question number
+
+init_question();
 
 function init_question() {
-    document.getElementById("questiontext").innerHTML = questions[qn].question;
-    document.getElementById("questionoption1").innerHTML = questions[qn].option1;
-    document.getElementById("questionoption2").innerHTML = quesitons[qn].option2;
+    document.getElementById("question-text").innerHTML = questions[qn].question;
+    document.getElementById("question-option1").innerHTML = questions[qn].option1;
+    document.getElementById("question-option2").innerHTML = questions[qn].option2;
 }
 
 function next_question() {
