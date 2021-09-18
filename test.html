@@ -1,41 +1,18 @@
-<body>
-  <script type="application/javascript"
-          src="question.js">
-  </script>
-    <div id="content"> 
-      <p class="question" id="questiontext"></p>
-      <button class="select1" onclick="next_question()" id = "questionoption1"> </button> <br>
-      <button class="select2" onclick="next_question()" id = "questionoption2"> </button> <br>
-    </div>
-
-  <script>
-  var RF, SL, BH, NE; // User's scores
-  RF = SL = BH = NE = 0;
-  var qn = 0; // Question number
-
-  function init_question() {
-    document.getElementById("questiontext").innerHTML = questions[qn].question;
-    document.getElementById("questionoption1").innerHTML = questions[qn].option1;
-    document.getElementById("questionoption2").innerHTML = quesitons[qn].option2;
-  } 
-
-  function next_question() {
-    RF += questions[qn].effect.RF
-    SL += questions[qn].effect.SL
-    BH += questions[qn].effect.BH
-    NE += questions[qn].effect.NE
-    qn++;
-
-    if (qn < questions.length) {
-        init_question();
-    } else {
-        results();
-    }
-  }
-
-  function results() {
-    location.href = `results.html`
-        }
-
-  </script>
+<body onLoad="load()">
+  <script type="application/javascript" src="question.js"></script>
+  <div id="content">
+    <p class="question" id="questiontext"></p>
+    <button
+      class="select1"
+      onclick="next_question()"
+      id="questionoption1"
+    ></button>
+    <br />
+    <button
+      class="select2"
+      onclick="next_question()"
+      id="questionoption2"
+    ></button>
+    <br />
+  </div>
 </body>
