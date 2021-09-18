@@ -2,12 +2,6 @@ var RF, SL, BH, NE; // User's scores
 RF = SL = BH = NE = 0;
 var qn = 0; // Question numberß
 
-function load() {
-  document.getElementById("questiontext").innerHTML = questions[0].question;
-  document.getElementById("questionoption1").innerHTML = questions[0].option1;
-  document.getElementById("questionoption2").innerHTML = questions[0].option2;
-}
-
 function init_question() {
   document.getElementById("questiontext").innerHTML = questions[qn].question;
   document.getElementById("questionoption1").innerHTML = questions[qn].option1;
