@@ -1,11 +1,17 @@
 var RF, SL, BH, NE; // User's scores
 RF = SL = BH = NE = 0;
-var qn = 0; // Question numberß
+var qn = 0; // Question number
+
+init_question();
 
 function init_question() {
-    document.getElementById("questiontext").innerHTML = questions[qn].question;
-    document.getElementById("questionoption1").innerHTML = questions[qn].option1;
-    document.getElementById("questionoption2").innerHTML = quesitons[qn].option2;
+    const q = document.getElementById("question-text").innerHTML;
+    const o_1 = document.getElementById("question-option1").innerHTML; 
+    const o_2 = document.getElementById("question-option2").innerHTML;
+
+    q  = questions[qn].question;  
+    o_1 = questions[qn].option1;
+    o_2 = questions[qn].option2;
 }
 
 function next_question() {
@@ -23,8 +29,8 @@ function next_question() {
 }
 
 function results() {
-    location.href = `results.html`
-        }
+    location.href = `results.html`;
+}
 
 questions = [
     {
@@ -49,4 +55,4 @@ questions = [
                     "NE": 0   
         }
     }
-]
+];
